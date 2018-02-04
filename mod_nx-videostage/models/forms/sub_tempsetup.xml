@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+<field type="spacer" name="tempsettitle" label="Erweiterte Temperaturanzeige Einstellungen" />
+
+				<field name="t1high" type="text" default="10" label="Temperaturbereich 1 Ende" description="Ende des Temperaturberichs" />
+				<field name="t1color" type="NXcolor" format="rgba" default="rgba(70,162,240, 0.8)" label="Farbe Bereich 1" description="Hintergrundfarbe der Temperaturbox Temperaturen unter 10 Grad" />
+
+				<field name="t2low" type="text" default="10"  label="Temperaturbereich 2 Anfang" description="Anfang des Temperaturberichs" />
+				<field name="t2high" type="text" default="15"  label="Temperaturbereich 2 Ende" description="Ende des Temperaturberichs" />
+				<field name="t2color" type="NXcolor" format="rgba" default="rgba(41,217,62, 0.8)"  label="Farbe Bereich 2" description="Hintergrundfarbe der Temperaturbox bei Temperaturen zwischen 10 - 15 Grad" />
+
+				<field name="t3low" type="text" default="15"  label="Temperaturbereich 3 Anfang" description="Anfang des Temperaturberichs" />
+				<field name="t3high" type="text" default="22"  label="Temperaturbereich 3 Ende" description="Ende des Temperaturberichs" />
+				<field name="t3color" type="NXcolor" format="rgba" default="rgba(217,217,41, 0.8)"  label="Farbe Bereich 3" description="Hintergrundfarbe der Temperaturbox bei Temperaturen zwischen 15 - 22 Grad" />
+
+				<field name="t4low" type="text" default="22" label="Temperaturbereich 4 Anfang" description="Anfang des Temperaturberichs" />
+				<field name="t4high" type="text" default="30" label="Temperaturbereich 4 Ende" description="Ende des Temperaturberichs" />
+				<field name="t4color" type="NXcolor" format="rgba" default="rgba(217,165,41, 0.8)" label="Farbe Bereich 4" description="Hintergrundfarbe der Temperaturbox bei Temperaturen zwischen 22 - 30 Grad" />
+
+				<field name="t5low" type="text" default="30"  label="Temperaturbereich 5 Anfang" description="Anfang des Temperaturberichs" />
+				<field name="t5color" type="NXcolor" format="rgba" default="rgba(217,78,41, 0.8)"  label="Farbe Bereich 5" description="Hintergrundfarbe der Temperaturbox bei Temperaturen über 30 Grad" />
+	</form>

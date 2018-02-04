@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+	<name>MOD_NX_VSTAGE_LABEL</name>
+	<author>Marco Rensch</author>
+	<creationDate>December 2017</creationDate>
+	<copyright>Copyright (C) nx-designs.ch</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>marco.rensch@nx-designs.ch</authorEmail>
+	<authorUrl>www.nx-designs.ch</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_NX_VSTAGE_DESC</description>
+	<files>
+		<filename module="mod_nx-videostage">mod_nx-videostage.php</filename>
+		<folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_nx-videostage.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_nx-videostage.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_nx-videostage/models/fields">
+                <field 
+                	name="nxvs_url" 	 
+                	type="textfield" 
+                	label="MOD_NX_VSTAGE_URL_LBL" 	
+                	description="MOD_NX_VSTAGE_URL_DESC" 
+                />
+                <field 
+                	name="nxvs_ratio" 
+                	type="text"	  
+                	label="MOD_NX_VSTAGE_RAT_LBL"	
+                	description="MOD_NX_VSTAGE_RAT_DESC"  
+                	hint="56.23%" 
+                	default="56.23%" 
+                />
+              	<field 
+              		name="nxvs_bordercolor" 
+              		type="nxcolor"  
+              		label="MOD_NX_VSTAGE_BOR_LBL" 
+              		description="MOD_NX_VSTAGE_BOR_DESC" 
+              		format="rgba" 
+              		default="rgba(0,0,0, 0.8)" 
+                />
+              	<field
+              		name="nxvs_borderwidth"
+              		type="text"
+              		label="MOD_NX_VSTAGE_BOW_LBL"
+              		description="MOD_NX_BOW_DESC"
+              		hint="10px"
+              		default="5px"
+              	/>
+                <field 
+                	name="nxvs_rad" 	 
+                	type="text" 	  
+                	label="MOD_NX_VSTAGE_RAD_LBL" 	
+                	sescription="MOD_NX_VSTAGE_RAD_DESC"
+                  default="10px" 	
+                	hint="10px 10px 20px 30px" 
+                />
+                <field 
+                	name="nxvs_vol" 	 
+                	type="text" 	  
+                	label="MOD_NX_VSTAGE_VOL_LBL"
+                  default="0"
+                  hint="0.0 to 1.0" 	
+                	description="MOD_NX_VSTAGE_VOL_DESC" 
+                />
+                <field 
+                	name="nxvs_ap" 	
+                	type="radio" 	  
+                	label="MOD_NX_VSTAGE_AP_LBL"  	
+                	description="MOD_NX_VSTAGE_AP_DESCR" 	
+                	default="0"		
+                	class="btn-group btn-group-yesno">
+            					<option value="0">JNO</option> 
+            					<option value="1">JYES</option>
+        				</field>
+        				<field 
+                	name="nxvs_loop" 	
+                	type="radio" 	  
+                	label="MOD_NX_VSTAGE_LOOP_LBL"  	
+                	description="MOD_NX_VSTAGE_LOOP_DESCR" 	
+                	default="1"		
+                	class="btn-group btn-group-yesno">
+            					<option value="0">JNO</option> 
+            					<option value="1">JYES</option>
+        				</field>
+        				<field 
+                  name="nxvs_ctrl" type="radio" 	  
+        					label="MOD_NX_VSTAGE_CTRL_LBL"  	
+        					description="MOD_NX_VSTAGE_CTRL_DESC" 
+        					default="1" 	
+        					class="btn-group btn-group-yesno">
+            					<option value="0">JNO</option> 
+            					<option value="1">JYES</option>
+        				</field>
+        				<field 
+              		name="nxvs_stagecolor" 
+              		type="nxcolor"  
+              		label="MOD_NX_VSTAGE_STAGECOLOR_LBL" 
+              		description="MOD_NX_VSTAGE_STAGECOLOR_DESC" 
+              		format="rgba" 
+              		default="rgba(34,34,34, 1)" 
+                />
+                <field
+                  name="nxvs_enable_html"
+                  type="radio"
+                  label="MOD_NX_VSTAGE_ENATEXT_LBL"
+                  description="MOD_NX_VSTAGE_ENATEXT_DESC"
+                  default="1"
+                  class="btn-group btn-group-yesno">
+                      <option value="0">JNO</option> 
+                      <option value="1">JYES</option>
+                </field>
+                <field
+                  name="nxvs_html_position"
+                  type="list"
+                  showon="nxvs_enable_html:1"
+                  label="MOD_NX_VSTAGE_POSTEXT_LBL"
+                  description="MOD_NX_VSTAGE_POSTEXT_DESC"
+                  default="left">
+                      <option value="top">MOD_NX_VSTAGE_POS_TOP</option>
+                      <option value="left">MOD_NX_VSTAGE_POS_LEFT</option>
+                      <option value="right">MOD_NX_VSTAGE_POS_RIGHT</option>
+                      <option value="bottom">MOD_NX_VSTAGE_POS_BOTTOM</option>
+                </field>
+
+                <field
+                  name="nxvs_html_class"
+                  type="list"
+                  showon="nxvs_enable_html:1"
+                  label="MOD_NX_VSTAGE_TXT_CLS_LBL"
+                  description="MOD_NX_VSTAGE_TXT_CLS_DESC"
+                  default="uk-dark">
+                      <option value="none">MOD_NX_VSTAGE_TXT_CLS_NONE</option>
+                      <option value="uk-dark">MOD_NX_VSTAGE_TXT_CLS_DARK</option>
+                      <option value="uk-light">MOD_NX_VSTAGE_TXT_CLS_LIGHT</option>
+                </field>
+                <field
+                    name="nxvs_vid_valign"
+                    type="list"
+                    showon="nxvs_enable_html:1[AND]nxvs_html_position:left,right"
+                    label="MOD_NX_VSTAGE_TXT_VALIGN_LBL"
+                    description="MOD_NX_VSTAGE_TXT_VALIGN_DESC"
+                    default="center">
+                      <option value="top">MOD_NX_VSTAGE_TXT_VALIGN_TOP</option>
+                      <option value="middle">MOD_NX_VSTAGE_TXT_VALIGN_CEN</option>
+                      <option value="bottom">MOD_NX_VSTAGE_TXT_VALIGN_BOT</option>
+                </field>
+                <field 
+                	name="nxvs_html" 
+                	type="editor"
+                  showon="nxvs_enable_html:1" 	  
+                	label="MOD_NX_VSTAGE_TXT_LBL" 	
+                	description="MOD_NX_VSTAGE_TXT_LBL" 
+                  filter="safehtml"
+                />
+            </fieldset>
+            <fieldset name="Videoeffect">
+              <field
+                  name="nxvs_effect_type"
+                  type="list"
+                  label="MOD_NX_VSTAGE_FSL_ET"
+                  description=""
+                  default="ambilight">
+                    <option value="none">MOD_NX_VSTAGE_FSL_ET_NE</option>
+                    <option value="ambilight">MOD_NX_VSTAGE_FSL_ET_AL</option>
+                    <option value="dropshadow">MOD_NX_VSTAGE_FSL_ET_DS</option>
+              </field>
+            </fieldset>
+            <fieldset name="advanced">
+              	<field 
+                  name="debug" 	
+              		type="radio" 	  
+              		label="Debug" 					
+              		description="Debug Output?"			
+              		default="0" 	
+              		class="btn-group btn-group-yesno">
+          					<option value="0">JNO</option> 
+          					<option value="1">JYES</option>
+  				      </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

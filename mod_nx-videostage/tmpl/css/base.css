@@ -1,0 +1,46 @@
+/* 
+
+		Stylesheet for nx-videoStage
+		created by nx-designs
+		Copyright (C) 2009 - 2018 nx-designs.
+		GNU General Public License version 2 or later; see LICENSE.txt
+
+*/
+div.nx-productions{}
+div.nx-videostage-container {
+	position:			relative;
+	padding:		    40px;
+    width:              100%;
+}
+div.nx-videostage{
+	width: 				100%;
+	margin-left:		auto;
+	margin-right:		auto;
+}
+.nx-h5player {
+	position: relative;
+    height: 0;
+    width: 100%;
+    max-width: 100%;
+}
+ .nx-h5player video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    overflow: hidden;
+    /*box-shadow: 0 0 10px #000;*/
+}
+.nx-h5player canvas  {
+    position: absolute;
+    top:		0;
+    left:		0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    -webkit-filter: blur(50px);
+    opacity: 0.75;
+    z-index: 1;
+}

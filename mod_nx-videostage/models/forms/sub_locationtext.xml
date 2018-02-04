@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<field 
+		type="spacer" 
+		name="locationnameinfotext"  
+		class="text" 
+		label="Die Titelzeile besteht aus einem persönlichen Text-Präfix, sowie dem Standort und der Länderangabe gemäss XML Datei. Hier kann die Ausgabe angepasst werden." />
+
+	<field 
+		name="pretext" 
+		type="text" 
+		hint="Wettervorhersage für" 
+		label="Text Präfix" 
+		description="Dieser Text wird vor dem Standortnamen als ausgegeben." />
+
+	<field
+		name="pretexttag"
+		type="list"
+		label="Formatierung für den Text Präfix"
+		default="span"
+		>
+		<option value="h1">Header 1</option>
+		<option value="h2">Header 2</option> 
+		<option value="h3">Header 3</option> 
+		<option value="h4">Header 4</option>
+		<option value="p">Paragraph</option>
+		<option value="span">Span</option>
+		<option value="div">Div</option>
+	</field>
+
+	<field 
+		type="spacer" 
+		name="blank1"  
+		class="text" 
+		label="" />
+	
+	<field 
+		name="title" 
+		type="text" 
+		hint="Standortname" 
+		label="Standortname" 
+		description="Genauere Angabe zum Standort" />
+
+	<field
+		name="titletag"
+		type="list"
+		label="Tag für Standort"
+		default="h2"
+		>
+		<option value="h1">Header 1</option>
+		<option value="h2">Header 2</option> 
+		<option value="h3">Header 3</option> 
+		<option value="h4">Header 4</option>
+		<option value="p">Paragraph</option>
+		<option value="span">Span</option>
+		<option value="div">Div</option>
+	</field>
+	
+
+	<field 
+		type="spacer" 
+		name="blank2"  
+		class="text" 
+		label="" />
+
+	<field 
+		name="showCountry" 
+		type="radio"
+		default="1" 
+		label="Land im Titel anzeigen" 
+		description="Soll das Land angezeigt werden?" 
+		class="btn-group">
+			<option value="0">JNO</option> 
+			<option value="1">JYES</option>
+	</field>
+	<field
+		name="countrytag"
+		type="list"
+		label="Tag für Land"
+		default="h4"
+		>
+		<option value="h1">Header 1</option>
+		<option value="h2">Header 2</option> 
+		<option value="h3">Header 3</option> 
+		<option value="h4">Header 4</option>
+		<option value="p">Paragraph</option>
+		<option value="span">Span</option>
+		<option value="div">Div</option>
+	</field>
+				
+</form>
