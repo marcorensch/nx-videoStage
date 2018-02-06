@@ -29,6 +29,7 @@
                 	label="MOD_NX_VSTAGE_URL_LBL" 	
                 	description="MOD_NX_VSTAGE_URL_DESC" 
                 />
+		    <!--
                 <field 
                 	name="nxvs_ratio" 
                 	type="text"	  
@@ -37,6 +38,7 @@
                 	hint="56.23%" 
                 	default="56.23%" 
                 />
+-->
               	<field 
               		name="nxvs_bordercolor" 
               		type="nxcolor"  
