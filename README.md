@@ -1,5 +1,5 @@
 # nx-videostage
-Special HTML5 Video Player for Joomla!
+High customizable HTML5 Video Player for Joomla! 3.x with Ambilight Effect.
 
 ![Hires Demo](http://nx-productions.ch/docs/nx-videostage/img/hires-demo.png)
 
