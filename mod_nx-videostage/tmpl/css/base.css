@@ -31,7 +31,7 @@ div.nx-videostage{
     height: auto;
     z-index: 5;
     overflow: hidden;
-    /*box-shadow: 0 0 10px #000;*/
+    
 }
 .nx-h5player canvas  {
     position: absolute;
