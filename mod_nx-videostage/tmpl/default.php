@@ -14,8 +14,10 @@ $document->addScript( Juri::base() . 'modules/mod_nx-videostage/tmpl/js/player.j
 if($pl['configuration']['effect'] == 'ambilight'):
   $document->addScript( Juri::base() . 'modules/mod_nx-videostage/tmpl/js/ambilight.js');
 endif;
-
-$poster = Juri::base() . 'modules/mod_nx-videostage/tmpl/assets/img/poster.jpg';
+if($pl['data']['poster'] !== '')
+{
+  $poster = 'poster="' . Juri::base() . $pl['data']['poster'] . '"';
+}
 $htmlblock = $pl['configuration']['htmlblock'];
 $txtcls = ($pl['configuration']['htmlblockcls'] != 'none') ? $pl['configuration']['htmlblockcls'] : '';
 $gridmatch = '';
@@ -59,7 +61,6 @@ if($htmlblock)
   }
 
   if (in_array($pl['configuration']['htmlblockpos'], array('left','right'))){ 
-    print_r($pl['configuration']['htmlblockpos']);
     $gridmatch = 'uk-grid-item-match';
   }
 
@@ -114,7 +115,7 @@ if($htmlblock)
       <div class="uk-flex<?php echo $vidpos; ?>">
         <div class="nx-videostage">
           <div class="nx-h5player <?php echo $dropshadow ?>" id="player_<?php echo $pl['data']['id']; ?>">
-            <video id="<?php echo $pl['data']['id']; ?>" src="<?php echo $pl['data']['url']; ?>" poster="<?php echo $poster; ?>" <?php echo $playerparametes; ?> playsinline >
+            <video id="<?php echo $pl['data']['id']; ?>" src="<?php echo $pl['data']['url']; ?>" <?php echo $poster . $playerparametes; ?> playsinline >
             <!-- This plays the Video -->      
             </video>
             <?php if($pl['configuration']['effect'] == 'ambilight'):?>  
