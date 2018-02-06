@@ -17,6 +17,7 @@ require_once __DIR__ . '/helper.php';
 // Configuration Settings
 $player['data']['id']						= 'nx-videobox_' . $module->id;				// Setup a unique ID for this module instance
 $player['data']['url']						= $params->get( 'nxvs_url' , 'http://www.html5videoplayer.net/videos/toystory.mp4' );	// URL of the Video
+$player['data']['poster']					= $params->get( 'nxvs_poster' , '');								// Poster Image
 			
 $player['configuration']['effect']			= $params->get( 'nxvs_effect_type' , 'ambilight');
 $player['configuration']['bordercolor']		= $params->get( 'nxvs_bordercolor' , 'rgba(0,0,0, 0.9)' );	
