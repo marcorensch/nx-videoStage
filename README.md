@@ -10,6 +10,11 @@ Special HTML5 Video Player for Joomla!
 - Drop Shadow Player
 - Default Player
 
+### Textblock
+- Textblock Position
+  - Left, Right, Top, Bottom
+- Stage Background Color (rgba)
+
 ### Customizable Playback
 - Autoplay
 - Initial Volume
