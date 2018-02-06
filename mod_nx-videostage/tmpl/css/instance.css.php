@@ -5,7 +5,6 @@
 }
 <?php echo '#player_'.$pl['data']['id']; ?>{
 	 padding-bottom: <?php echo $pl['configuration']['ratio']?>;				/* Use 75% for 4:3 videos || or 56.23% for 16:9 videos */
-	 box-shadow: 0 0 10px #000;
 	 border-radius: 	<?php echo $pl['configuration']['radius']; ?>;
 
 }
@@ -22,5 +21,6 @@
 	border: 		<?php echo $pl['configuration']['borderwidth'] . ' solid ' . $pl['configuration']['bordercolor']; ?>;
 	border-radius: 	<?php echo $pl['configuration']['radius']; ?>;
 	overflow:		hidden;
+	box-shadow: 0 0 10px #000;
 	}
 </style>
