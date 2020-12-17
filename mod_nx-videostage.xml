@@ -2,7 +2,7 @@
 <extension type="module" version="1.0" client="site" method="upgrade">
 	<name>MOD_NX_VSTAGE_LABEL</name>
 	<author>Marco Rensch</author>
-	<creationDate>December 2017</creationDate>
+	<creationDate>December 2020</creationDate>
 	<copyright>Copyright (C) nx-designs.ch</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>marco.rensch@nx-designs.ch</authorEmail>
@@ -15,6 +15,8 @@
         <folder>language</folder>
         <folder>models</folder>
 		<filename>helper.php</filename>
+		<filename>changelog.md</filename>
+		<filename>readme.md</filename>
 	</files>
 	<languages folder="language">
         <language tag="en-GB">en-GB/en-GB.mod_nx-videostage.ini</language>
