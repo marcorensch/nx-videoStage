@@ -104,7 +104,7 @@
         				</field>
         				<field 
               		name="nxvs_stagecolor" 
-              		type="nxcolor"  
+              		type="color"
               		label="MOD_NX_VSTAGE_STAGECOLOR_LBL" 
               		description="MOD_NX_VSTAGE_STAGECOLOR_DESC" 
               		format="rgba" 

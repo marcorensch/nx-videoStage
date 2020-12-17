@@ -88,7 +88,7 @@ if($htmlblock)
   });
 </script>
 
-<?php require( __DIR__ . '/css/instance.css.php'); ?>
+<?php require(__DIR__ . '/css/instance.css.php'); ?>
 
 <div class="nx-productions">
 <?php 
